@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\SDL\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\SDL\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -141,6 +141,9 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FRACTURED_RENDERING\FRACTURED_RENDERING.vcxproj">
+      <Project>{3719523d-f7d0-490c-b766-55a402fc37dc}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\FRACTURED_UTILS\FRACTURED_UTILS.vcxproj">
       <Project>{f89177cb-9d26-4a77-a248-a18def5951e2}</Project>
     </ProjectReference>
@@ -153,6 +156,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\fragment.shader" />
+    <None Include="assets\shaders\vertex.shader" />
+    <None Include="SDL3.dll" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

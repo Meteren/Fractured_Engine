@@ -19,4 +19,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SDL3.dll" />
+    <None Include="assets\shaders\fragment.shader" />
+    <None Include="assets\shaders\vertex.shader" />
+  </ItemGroup>
 </Project>

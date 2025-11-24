@@ -26,7 +26,7 @@ namespace FRACTURED_WINDOW {
 				return false;
 			}
 			else {
-				printf("Context is created.");
+				printf("Context is created.\n");
 			}
 
 		}
