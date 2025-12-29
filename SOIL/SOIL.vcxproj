@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3719523d-f7d0-490c-b766-55a402fc37dc}</ProjectGuid>
-    <RootNamespace>FRACTUREDRENDERING</RootNamespace>
+    <ProjectGuid>{46b920af-8fc0-4d94-a60a-59f914da9571}</ProjectGuid>
+    <RootNamespace>SOIL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\GLAD\src\include;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;C:\Users\Meate\source\repos\Fractured_Engine\SOIL\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)\GLAD\src\include;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;C:\Users\Meate\source\repos\Fractured_Engine\SOIL\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,7 +106,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -121,7 +121,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -131,23 +131,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Essentials\Shader.h" />
-    <ClInclude Include="Essentials\ShaderLoader.h" />
-    <ClInclude Include="Essentials\TextureLoader.h" />
-    <ClInclude Include="Essentials\Texture.h" />
+    <ClInclude Include="include\SOIL\image_dxt.h" />
+    <ClInclude Include="include\SOIL\image_helper.h" />
+    <ClInclude Include="include\SOIL\SOIL.h" />
+    <ClInclude Include="include\SOIL\stbi_dds_aug.h" />
+    <ClInclude Include="include\SOIL\stbi_dds_aug_c.h" />
+    <ClInclude Include="include\SOIL\stb_image_aug.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Essentials\ShaderLoader.cpp" />
-    <ClCompile Include="Essentials\TextureLoader.cpp" />
-    <ClCompile Include="Essentials\Texture.cpp" />
+    <ClCompile Include="src\image_dxt.c" />
+    <ClCompile Include="src\image_helper.c" />
+    <ClCompile Include="src\original\stb_image-1.09.c" />
+    <ClCompile Include="src\original\stb_image-1.16.c" />
+    <ClCompile Include="src\soil.c" />
+    <ClCompile Include="src\stb_image_aug.c" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GLAD\GLAD.vcxproj">
-      <Project>{66a04925-fdfb-470b-8086-f7e348db80d9}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\SOIL\SOIL.vcxproj">
-      <Project>{46b920af-8fc0-4d94-a60a-59f914da9571}</Project>
-    </ProjectReference>
+    <Text Include="LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

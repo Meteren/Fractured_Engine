@@ -15,28 +15,46 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Essentials\Shader.h">
+    <ClInclude Include="include\SOIL\image_dxt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Essentials\ShaderLoader.h">
+    <ClInclude Include="include\SOIL\image_helper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Essentials\TextureLoader.h">
+    <ClInclude Include="include\SOIL\SOIL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Essentials\Texture.h">
+    <ClInclude Include="include\SOIL\stb_image_aug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SOIL\stbi_dds_aug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SOIL\stbi_dds_aug_c.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Essentials\ShaderLoader.cpp">
+    <ClCompile Include="src\image_dxt.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Essentials\TextureLoader.cpp">
+    <ClCompile Include="src\image_helper.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Essentials\Texture.cpp">
+    <ClCompile Include="src\soil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\stb_image_aug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\original\stb_image-1.09.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\original\stb_image-1.16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE.txt" />
   </ItemGroup>
 </Project>
