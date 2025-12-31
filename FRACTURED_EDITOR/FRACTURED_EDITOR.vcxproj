@@ -71,11 +71,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\SDL\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Dependencies\SDL\include;$(SolutionDir)FRACTURED_WINDOW\Window;$(SolutionDir)GLAD\src\include;$(SolutionDir)FRACTURED_UTILS;C:\Users\Meate\source\repos\Fractured_Engine\FRACTURED_RENDERING;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Dependencies\SDL\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -71,10 +71,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\GLAD\src\include;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;C:\Users\Meate\source\repos\Fractured_Engine\SOIL\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GLAD\src\include;$(SolutionDir)Dependencies\GLM;$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)\GLAD\src\include;C:\Users\Meate\source\repos\Fractured_Engine\Dependencies\GLM;C:\Users\Meate\source\repos\Fractured_Engine\SOIL\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)GLAD\src\include;$(SolutionDir)Dependencies\GLM;$(SolutionDir)SOIL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -148,6 +148,9 @@
     <ProjectReference Include="..\SOIL\SOIL.vcxproj">
       <Project>{46b920af-8fc0-4d94-a60a-59f914da9571}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FRACTURED_RENDERING.APS" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

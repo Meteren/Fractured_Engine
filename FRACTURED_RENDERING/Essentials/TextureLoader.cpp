@@ -21,6 +21,8 @@ namespace FRACTURED_RENDERING {
 
 		unsigned char* textureData = SOIL_load_image(texturePath.c_str(), &width, &height, &channels, SOIL_LOAD_AUTO);
 
+		flipTexture(width, height, channels, textureData);
+
 		if (!textureData) {
 			printf("Texture couldn't be loaded. \n");
 			return false;
@@ -37,7 +39,7 @@ namespace FRACTURED_RENDERING {
 			break;
 		}
 
-		glGenTextures(GL_TEXTURE_2D, &textureID);
+		glGenTextures(1, &textureID);
 		glBindTexture(GL_TEXTURE_2D, textureID);
 
 		switch (textureType) {
@@ -62,6 +64,30 @@ namespace FRACTURED_RENDERING {
 		SOIL_free_image_data(textureData);
 
 		return true;
+	}
+
+	void TextureLoader::flipTexture(int width, int height,int channels, unsigned char* textureData)
+	{
+		int stride = width * channels;
+
+		unsigned char* top;
+		unsigned char* bottom;
+		unsigned char temp;
+
+		for (int y = 0; y < height / 2; y++) {
+
+			top = textureData + stride * y;
+			bottom = textureData + (height - 1 - y) * stride;
+
+			for (int x = 0; x < stride; x++) {
+
+				temp = top[x];
+				top[x] = bottom[x];
+				bottom[x] = temp;
+			}
+
+		}
+
 	}
 
 }

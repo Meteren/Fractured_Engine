@@ -2,9 +2,9 @@
 
 #include <memory>
 #include "Texture.h"
-#include <SOIL/SOIL.h>
 #include <string>
 #include <stdio.h>
+#include <SOIL/SOIL.h>
 
 
 namespace FRACTURED_RENDERING {
@@ -20,6 +20,7 @@ namespace FRACTURED_RENDERING {
 	private:
 
 		static bool loadTexture(unsigned int& textureID, int& width, int& height, const std::string& texturePath, Texture::TextureType blendType = Texture::TextureType::PIXEL);
+		static void flipTexture(int width, int height, int channels, unsigned char* textureData);
 
 	};
 }

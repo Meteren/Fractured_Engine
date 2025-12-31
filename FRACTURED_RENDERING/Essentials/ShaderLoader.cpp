@@ -11,7 +11,7 @@ namespace FRACTURED_RENDERING {
 			return nullptr;
 		}
 		else {
-			printf("Program successfully created.");
+			printf("Program successfully created.\n");
 			return std::make_shared<Shader>(shaderProgram);
 		}
 

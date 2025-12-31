@@ -3,6 +3,7 @@
 #include <Window.h>
 #include <SDL.h>
 #include <essentials/ShaderLoader.h>
+#include <essentials/TextureLoader.h>
 
 int main(int argc, char* argv[]) {
 	
@@ -68,6 +69,10 @@ int main(int argc, char* argv[]) {
 	auto shader = FRACTURED_RENDERING::ShaderLoader::createShader("C:/Users/Meate/source/repos/Fractured_Engine/FRACTURED_EDITOR/assets/shaders/vertex.shader",
 		"C:/Users/Meate/source/repos/Fractured_Engine/FRACTURED_EDITOR/assets/shaders/fragment.shader");
 
+	auto texture = FRACTURED_RENDERING::TextureLoader::createTexture(FRACTURED_RENDERING::Texture::TextureType::BLENDED,
+		"C:/Users/Meate/source/repos/Fractured_Engine/FRACTURED_EDITOR/assets/textures/miaGoth.png");
+
+
 	unsigned int VAO;
 
 	unsigned int EBO;
@@ -132,13 +137,18 @@ int main(int argc, char* argv[]) {
 
 		shader.get()->setFloat4("u_color", 0, 0, 1, 1);
 
+		shader.get()->setInt1("mainTex", 0);
+
+		texture.get()->useTexture(GL_TEXTURE0);
+
 		//glDrawArrays(GL_TRIANGLES, 0, 3);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, NULL);
 
 		glBindVertexArray(0);
 
 		glUseProgram(0);
-		
+
+		texture.get()->unbind();
 
 		SDL_GL_SwapWindow(window.GetWindow().get());
 	}

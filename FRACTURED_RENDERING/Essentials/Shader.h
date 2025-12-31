@@ -44,6 +44,11 @@ namespace FRACTURED_RENDERING {
 			glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(mat)); 
 		}
 
+		void setInt1(std::string u_name,int value) {
+			int location = glGetUniformLocation(programID, u_name.c_str());
+			glUniform1i(location, value);
+		}
+
 
 	private:
 
